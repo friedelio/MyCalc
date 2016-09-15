@@ -12,7 +12,7 @@ import Foundation
 class CalcBrain {
     
     private var accumulator: Double = 0.0
-    var OPisPending = false
+    var OPisPending = false  // steuerung
     
     private enum Operation {
         case Constant(Double)
