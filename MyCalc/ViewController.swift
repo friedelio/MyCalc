@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // z.b. initiale werte laden...
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,8 +43,8 @@ class ViewController: UIViewController {
     }
     
     
-    private var cb = CalcBrain()
-    private var isUsrTyping = false
+    private var cb = CalcBrain()  // das model-objekt
+    private var isUsrTyping = false  // steuerung
     private var isTypingNK  = false
     private var isNewval = true
 

@@ -18,22 +18,22 @@ class CalcBrain {
         case Constant(Double)
         case UnaryOperation((Double) -> Double)
         case BinOperation((Double, Double) -> Double)
-        case Equals
+        case Equals // ohne wert
     }
     
     private var operations: Dictionary<String, Operation> = [
         "π" : Operation.Constant(M_PI),
         "e" : Operation.Constant(M_E),
         "√": Operation.UnaryOperation(sqrt),
-        "cos" : Operation.UnaryOperation(cos),
+        "cos" : Operation.UnaryOperation(cos), // (double) -> double
         "sin" : Operation.UnaryOperation(sin),
         "abs" : Operation.UnaryOperation(abs),
         "+/-" : Operation.UnaryOperation({ -$0 }),
-        "*" : Operation.BinOperation({ $0 * $1 }),
+        "*" : Operation.BinOperation({ $0 * $1 }), // (double, double) -> double
         "/" : Operation.BinOperation({ $0 / $1 }),
         "-" : Operation.BinOperation({ $0 - $1 }),
         "+" : Operation.BinOperation({ $0 + $1 }),
-
+        // was noch??
         "=" : Operation.Equals,
     ]
     
